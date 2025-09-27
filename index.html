@@ -3,52 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | QR code component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      /* 
-      # Front-end Style Guide
+      :root {
+        --white: #ffffff;
+        --slate-300: #d6e2f0;
+        --slate-500: #68778d;
+        --slate-900: #1f3251;
+      }
 
-## Layout
+      body {
+        background-color: var(--slate-300);
+      }
 
-The designs were created to the following widths:
+      .qr-card {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        background-color: var(--white);
+        border-radius: 20px;
+        padding: 16px;
+        max-width: 288px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 1px 10px 9px -1px rgba(0, 0, 0, 0.05);
+        -webkit-box-shadow: 1px 10px 9px -1px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 1px 10px 9px -1px rgba(0, 0, 0, 0.05);
+      }
 
-- Mobile: 375px
-- Desktop: 1440px
+      .qr-card img {
+        display: block;
+        width: 100%;
+        border-radius: 14px;
+      }
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+      .qr-card h1 {
+        color: var(--slate-900);
+        font-weight: 700;
+        font-size: 24px;
+        margin: 22px 0px 23px 0px;
+        letter-spacing: -1px;
+        line-height: 26px;
+      }
 
-## Colors
-
-- White: hsl(0, 0%, 100%)
-
-- Slate 300: hsl(212, 45%, 89%)
-- Slate 500: hsl(216, 15%, 48%)
-- Slate 900: hsl(218, 44%, 22%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 15px
-
-### Font
-
-- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
-- Weights: 400, 700
-
-> 💎 This is a free+ challenge. So, if you want to see all the design details and practice working with professional tools like Figma, you can download the design file from where you downloaded the starter code.
- */
+      .qr-card p {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--slate-500);
+        margin: 0 16px 24px 16px;
+        letter-spacing: 0px;
+        line-height: 20px;
+      }
 
       .attribution {
         font-size: 11px;
@@ -57,20 +76,30 @@ The designs were created to the following widths:
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      main {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
     </style>
   </head>
   <body>
-    <h1>Improve your front-end skills by building projects</h1>
-    <p>
-      Scan the QR code to visit Frontend Mentor and take your coding skills to
-      the next level
-    </p>
+    <main>
+      <article class="qr-card">
+        <img
+          src="images/image-qr-code.png"
+          alt="QR code linking to Frontend Mentor website"
+        />
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+        <h1>Improve your front-end skills by building projects</h1>
+        <p>
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </article>
+    </main>
   </body>
 </html>
